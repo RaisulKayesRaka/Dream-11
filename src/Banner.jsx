@@ -17,7 +17,7 @@ export default function Banner({ handleClaimCredit }) {
         <div className="border rounded-2xl border-[#E7FE29] p-1">
           <button
             onClick={handleClaimCredit}
-            className="bg-[#E7FE29] text-black rounded-xl px-3 py-2 md:px-4 md:py-3 lg:px-5 lg:py-4 font-bold"
+            className="bg-[#E7FE29] text-black rounded-xl px-3 py-2 md:px-4 md:py-3 lg:px-5 lg:py-4 font-bold transition-transform active:scale-95"
           >
             Claim Free Credit
           </button>

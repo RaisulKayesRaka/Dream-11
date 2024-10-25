@@ -20,14 +20,17 @@ export default function AvailablePlayers({ players, handleSelectedPlayers }) {
             </div>
           </div>
           <hr />
-          <p className="font-bold mt-4">Rating</p>
           <div className="flex items-center justify-between mt-4">
-            <p className="font-semibold">{player.batting}</p>
+            <p className="font-semibold">Batting</p>
+            <p>{player.batting}</p>
+          </div>
+          <div className="flex items-center justify-between mt-4">
+            <p className="font-semibold">Bowling</p>
             <p>{player.bowling}</p>
           </div>
           <div className="flex items-center justify-between mt-3">
             <p className="font-semibold">Price: ${player.price}</p>
-            <button onClick={()=>handleSelectedPlayers(player.id)} className="px-4 py-2 rounded-lg border hover:bg-[#1313130D]">Choose Player</button>
+            <button onClick={()=>handleSelectedPlayers(player.id)} className="px-4 py-2 rounded-lg border hover:bg-[#1313130D] transition-transform active:scale-95">Choose Player</button>
           </div>
         </div>
       ))}
