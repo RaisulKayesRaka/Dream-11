@@ -44,7 +44,7 @@ export default function Players({players, playerStatus, handlePlayerStatus, hand
         {playerStatus.status === "available" ? (
           <AvailablePlayers players={players} handleSelectedPlayers={handleSelectedPlayers}></AvailablePlayers>
         ) : (
-          <SelectedPlayers selectedPlayers={selectedPlayers} handleRemovePlayer={handleRemovePlayer}></SelectedPlayers>
+          <SelectedPlayers selectedPlayers={selectedPlayers} handleRemovePlayer={handleRemovePlayer} handlePlayerStatus={handlePlayerStatus}></SelectedPlayers>
         )}
       </section>
     </>
