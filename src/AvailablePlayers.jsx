@@ -1,6 +1,6 @@
 import PropTypes from "prop-types";
 
-export default function AvailablePlayers({ players }) {
+export default function AvailablePlayers({ players, handleSelectedPlayers }) {
   return (
     <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mt-8 mb-20">
       {players.map((player) => (
@@ -27,7 +27,7 @@ export default function AvailablePlayers({ players }) {
           </div>
           <div className="flex items-center justify-between mt-3">
             <p className="font-semibold">Price: ${player.price}</p>
-            <button className="px-4 py-2 rounded-lg border hover:bg-[#1313130D]">Choose Player</button>
+            <button onClick={()=>handleSelectedPlayers(player.id)} className="px-4 py-2 rounded-lg border hover:bg-[#1313130D]">Choose Player</button>
           </div>
         </div>
       ))}
@@ -37,4 +37,5 @@ export default function AvailablePlayers({ players }) {
 
 AvailablePlayers.propTypes = {
   players: PropTypes.array.isRequired,
+  handleSelectedPlayers: PropTypes.func.isRequired,
 };

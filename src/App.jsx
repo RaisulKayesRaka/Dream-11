@@ -10,6 +10,7 @@ function App() {
   let [claimCredit, setClaimCredit] = useState(0);
   let [playerStatus, setPlayerStatus] = useState({ status: "available" });
   let [players, setPlayers] = useState([]);
+  let [selectedPlayers, setSelectedPlayers] = useState([]);
 
   useEffect(() => {
     fetch("player-data.json")
@@ -17,15 +18,6 @@ function App() {
       .then((data) => setPlayers(data.players));
   }, []);
 
-  const handlePlayerStatus = (status) => {
-    if (status === "available") {
-      setPlayerStatus({ status: "available" });
-    }
-
-    if (status === "selected") {
-      setPlayerStatus({ status: "selected" });
-    }
-  };
 
   const handleClaimCredit = () => {
     toast.success("Credit Added To Your Account", {
@@ -42,6 +34,25 @@ function App() {
     setClaimCredit(claimCredit + 5000000);
   };
 
+  const handlePlayerStatus = (status) => {
+    if (status === "available") {
+      setPlayerStatus({ status: "available" });
+    }
+
+    if (status === "selected") {
+      setPlayerStatus({ status: "selected" });
+    }
+  };
+
+  const handleSelectedPlayers = (id) => {
+    let selected = players.find((player)=>player.id===id);
+    setSelectedPlayers([...selectedPlayers, selected])
+  };
+
+  const handleRemovePlayer = (id) => {
+    setSelectedPlayers(selectedPlayers.filter((player) => player.id !== id));
+  };
+
   return (
     <>
       <ToastContainer />
@@ -54,6 +65,9 @@ function App() {
           players={players}
           playerStatus={playerStatus}
           handlePlayerStatus={handlePlayerStatus}
+          handleSelectedPlayers={handleSelectedPlayers}
+          selectedPlayers={selectedPlayers}
+          handleRemovePlayer={handleRemovePlayer}
         ></Players>
       </main>
     </>

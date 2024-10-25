@@ -2,7 +2,7 @@ import AvailablePlayers from "./AvailablePlayers";
 import SelectedPlayers from "./SelectedPlayers";
 import PropTypes from "prop-types";
 
-export default function Players({players, playerStatus, handlePlayerStatus }) {
+export default function Players({players, playerStatus, handlePlayerStatus, handleSelectedPlayers, selectedPlayers, handleRemovePlayer}){
   return (
     <>
       <section className="mx-auto max-w-[1320px] w-11/12 mt-20">
@@ -14,7 +14,7 @@ export default function Players({players, playerStatus, handlePlayerStatus }) {
               </h1>
             ) : (
               <h1 className="text-xl md:text-2xl font-bold">
-                Selected Players (<span>0</span>/6)
+                Selected Players (<span>{selectedPlayers.length}</span>/6)
               </h1>
             )}
           </div>
@@ -37,14 +37,14 @@ export default function Players({players, playerStatus, handlePlayerStatus }) {
                   : ""
               } rounded-e-xl px-3 py-2 md:px-4 md:py-3 lg:px-5 lg:py-4`}
             >
-              Selected (<span>0</span>)
+              Selected (<span>{selectedPlayers.length}</span>)
             </button>
           </div>
         </div>
         {playerStatus.status === "available" ? (
-          <AvailablePlayers players={players}></AvailablePlayers>
+          <AvailablePlayers players={players} handleSelectedPlayers={handleSelectedPlayers}></AvailablePlayers>
         ) : (
-          <SelectedPlayers></SelectedPlayers>
+          <SelectedPlayers selectedPlayers={selectedPlayers} handleRemovePlayer={handleRemovePlayer}></SelectedPlayers>
         )}
       </section>
     </>
@@ -55,4 +55,7 @@ Players.propTypes = {
   handlePlayerStatus: PropTypes.func,
   playerStatus: PropTypes.object,
   players: PropTypes.array,
+  handleSelectedPlayers: PropTypes.func,
+  selectedPlayers: PropTypes.array,
+  handleRemovePlayer: PropTypes.func
 };
