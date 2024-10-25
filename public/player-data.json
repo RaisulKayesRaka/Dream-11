@@ -1,0 +1,154 @@
+{
+  "players": [
+    {
+      "id": 1,
+      "name": "Tamim Iqbal",
+      "country": "Bangladesh",
+      "image": "https://i.ibb.co.com/rsQjZWR/Tamim-Iqbal.jpg",
+      "role": "Wicket-keeper Batter",
+      "batting": "Right-handed",
+      "bowling": "Right-arm off break",
+      "price": 2500000
+    },
+    {
+      "id": 2,
+      "name": "Mushfiqur Rahim",
+      "country": "Bangladesh",
+      "image": "https://i.ibb.co.com/4KqXR9n/Mushfiqur-Rahim.jpg",
+      "role": "Wicket-keeper Batter",
+      "batting": "Right-handed",
+      "bowling": "Right-arm off break",
+      "price": 2000000
+    },
+    {
+      "id": 3,
+      "name": "Liton Das",
+      "country": "Bangladesh",
+      "image": "https://i.ibb.co.com/F6g6H4D/Liton-Das.jpg",
+      "role": "Batsman",
+      "batting": "Right-handed",
+      "bowling": "Right-arm off break",
+      "price": 1800000
+    },
+    {
+      "id": 4,
+      "name": "Mustafizur Rahman",
+      "country": "Bangladesh",
+      "image": "https://i.ibb.co.com/GQHQRgt/Mustafizur-Rahman.jpg",
+      "role": "Bowler",
+      "batting": "Left-handed",
+      "bowling": "Left-arm fast-medium",
+      "price": 2200000
+    },
+    {
+      "id": 5,
+      "name": "Mahmudullah Riyad",
+      "country": "Bangladesh",
+      "image": "https://i.ibb.co.com/6W7N5y1/Mahmudullah-Riyad.png",
+      "role": "All-rounder",
+      "batting": "Right-handed",
+      "bowling": "Right-arm off break",
+      "price": 2100000
+    },
+    {
+      "id": 6,
+      "name": "Virat Kohli",
+      "country": "India",
+      "image": "https://i.ibb.co.com/zQ6WJ1n/Virat-Kohli.jpg",
+      "role": "Batsman",
+      "batting": "Right-handed",
+      "bowling": "Right-arm medium",
+      "price": 3000000
+    },
+    {
+      "id": 7,
+      "name": "Rohit Sharma",
+      "country": "India",
+      "image": "https://i.ibb.co.com/fMzDBSP/Rohit-Sharma.jpg",
+      "role": "Batsman",
+      "batting": "Right-handed",
+      "bowling": "Right-arm off break",
+      "price": 2800000
+    },
+    {
+      "id": 8,
+      "name": "Jasprit Bumrah",
+      "country": "India",
+      "image": "https://i.ibb.co.com/wJzV24T/Jasprit-Bumrah.jpg",
+      "role": "Bowler",
+      "batting": "Right-handed",
+      "bowling": "Right-arm fast",
+      "price": 2700000
+    },
+    {
+      "id": 9,
+      "name": "Ravindra Jadeja",
+      "country": "India",
+      "image": "https://i.ibb.co.com/QvPn2Qs/Ravindra-Jadeja.jpg",
+      "role": "All-rounder",
+      "batting": "Left-handed",
+      "bowling": "Left-arm orthodox",
+      "price": 2600000
+    },
+    {
+      "id": 10,
+      "name": "Rishabh Pant",
+      "country": "India",
+      "image": "https://i.ibb.co.com/gFZ8rGx/Rishabh-Pant.png",
+      "role": "Wicket-keeper Batter",
+      "batting": "Left-handed",
+      "bowling": "Right-arm off break",
+      "price": 2500000
+    },
+    {
+      "id": 11,
+      "name": "Babar Azam",
+      "country": "Pakistan",
+      "image": "https://i.ibb.co.com/cFyBz6w/Babar-Azam.jpg",
+      "role": "Batsman",
+      "batting": "Right-handed",
+      "bowling": "Right-arm off break",
+      "price": 2900000
+    },
+    {
+      "id": 12,
+      "name": "Shaheen Afridi",
+      "country": "Pakistan",
+      "image": "https://i.ibb.co.com/LQkY9Z9/Shaheen-Afridi.jpg",
+      "role": "Bowler",
+      "batting": "Left-handed",
+      "bowling": "Left-arm fast",
+      "price": 2700000
+    },
+    {
+      "id": 13,
+      "name": "Mohammad Rizwan",
+      "country": "Pakistan",
+      "image": "https://i.ibb.co.com/kmBShsh/Mohammad-Rizwan.png",
+      "role": "Wicket-keeper Batter",
+      "batting": "Right-handed",
+      "bowling": "Right-arm off break",
+      "price": 2500000
+    },
+    {
+      "id": 14,
+      "name": "Shadab Khan",
+      "country": "Pakistan",
+      "image": "https://i.ibb.co.com/CQf6kfp/Shadab-Khan.jpg",
+      "role": "All-rounder",
+      "batting": "Right-handed",
+      "bowling": "Right-arm leg break",
+      "price": 2400000
+    },
+    {
+      "id": 15,
+      "name": "Fakhar Zaman",
+      "country": "Pakistan",
+      "image": "https://i.ibb.co.com/Jt7HXLX/Fakhar-Zaman.jpg",
+      "role": "Batsman",
+      "batting": "Left-handed",
+      "bowling": "Right-arm off break",
+      "price": 2300000
+    }
+  ]
+}

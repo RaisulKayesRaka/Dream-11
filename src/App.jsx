@@ -1,12 +1,31 @@
 import Banner from "./Banner";
 import Nav from "./Nav";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import PropTypes from "prop-types";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
+import Players from "./Players";
 
 function App() {
   let [claimCredit, setClaimCredit] = useState(0);
+  let [playerStatus, setPlayerStatus] = useState({ status: "available" });
+  let [players, setPlayers] = useState([]);
+
+  useEffect(() => {
+    fetch("player-data.json")
+      .then((res) => res.json())
+      .then((data) => setPlayers(data.players));
+  }, []);
+
+  const handlePlayerStatus = (status) => {
+    if (status === "available") {
+      setPlayerStatus({ status: "available" });
+    }
+
+    if (status === "selected") {
+      setPlayerStatus({ status: "selected" });
+    }
+  };
 
   const handleClaimCredit = () => {
     toast.success("Credit Added To Your Account", {
@@ -30,6 +49,13 @@ function App() {
         <Nav claimCredit={claimCredit}></Nav>
         <Banner handleClaimCredit={handleClaimCredit}></Banner>
       </header>
+      <main>
+        <Players
+          players={players}
+          playerStatus={playerStatus}
+          handlePlayerStatus={handlePlayerStatus}
+        ></Players>
+      </main>
     </>
   );
 }
@@ -39,4 +65,5 @@ export default App;
 App.propTypes = {
   claimCredit: PropTypes.number,
   handleClaimCredit: PropTypes.func,
+  playerStatus: PropTypes.object,
 };
