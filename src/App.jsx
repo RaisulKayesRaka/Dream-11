@@ -18,7 +18,6 @@ function App() {
       .then((data) => setPlayers(data.players));
   }, []);
 
-
   const handleClaimCredit = () => {
     toast.success("Credit Added To Your Account", {
       position: "top-center",
@@ -45,8 +44,61 @@ function App() {
   };
 
   const handleSelectedPlayers = (id) => {
-    let selected = players.find((player)=>player.id===id);
-    setSelectedPlayers([...selectedPlayers, selected])
+    let selected = players.find((player) => player.id === id);
+
+    if (claimCredit < selected.price) {
+      toast.error("Not enough credit to buy this palyer. Claim some credit.", {
+        position: "top-center",
+        autoClose: 3000,
+        hideProgressBar: false,
+        closeOnClick: true,
+        pauseOnHover: true,
+        draggable: true,
+        progress: undefined,
+        theme: "light",
+      });
+      return;
+    }
+    if (selectedPlayers.length >= 6) {
+      toast.error("Maximum 6 Players Selected", {
+        position: "top-center",
+        autoClose: 3000,
+        hideProgressBar: false,
+        closeOnClick: true,
+        pauseOnHover: true,
+        draggable: true,
+        progress: undefined,
+        theme: "light",
+      });
+      return;
+    }
+    if (selectedPlayers.find((selectedPlayer) => selectedPlayer.id === id)) {
+      toast.error("Player Already Selected", {
+        position: "top-center",
+        autoClose: 3000,
+        hideProgressBar: false,
+        closeOnClick: true,
+        pauseOnHover: true,
+        draggable: true,
+        progress: undefined,
+        theme: "light",
+      });
+      return;
+    }
+
+    toast.success(`Congrates! ${selected.name} is now in your squad.`, {
+      position: "top-center",
+      autoClose: 3000,
+      hideProgressBar: false,
+      closeOnClick: true,
+      pauseOnHover: true,
+      draggable: true,
+      progress: undefined,
+      theme: "light",
+    });
+    
+    setClaimCredit(claimCredit - selected.price);
+    setSelectedPlayers([...selectedPlayers, selected]);
   };
 
   const handleRemovePlayer = (id) => {

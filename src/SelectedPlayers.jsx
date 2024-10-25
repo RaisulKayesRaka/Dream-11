@@ -12,7 +12,7 @@ export default function SelectedPlayers({ selectedPlayers, handleRemovePlayer })
               alt=""
             />
             <div>
-              <h3 className="text-2xl font-semibold">{player.name}</h3>
+              <h3 className="text-xl font-semibold">{player.name}</h3>
               <p>{player.role}</p>
             </div>
           </div>
