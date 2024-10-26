@@ -98,7 +98,7 @@ function App() {
       progress: undefined,
       theme: "light",
     });
-    
+
     setClaimCredit(claimCredit - selected.price);
     setSelectedPlayers([...selectedPlayers, selected]);
   };
@@ -126,7 +126,6 @@ function App() {
         <Newsletter></Newsletter>
         <Footer></Footer>
       </main>
-
     </>
   );
 }

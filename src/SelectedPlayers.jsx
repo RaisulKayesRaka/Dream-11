@@ -3,36 +3,44 @@ import PropTypes from "prop-types";
 export default function SelectedPlayers({
   selectedPlayers,
   handleRemovePlayer,
-  handlePlayerStatus
+  handlePlayerStatus,
 }) {
   return (
-    <div className="space-y-6 mt-8 mb-4 sm:mb-8 md:mb-16 lg:mb-20">
+    <div className="mb-4 mt-8 space-y-6 sm:mb-8 md:mb-16 lg:mb-20">
       {selectedPlayers.map((player) => (
         <div
           key={player.id}
-          className="border rounded-2xl p-4 md:-p-5 lg:-p-6 flex justify-between items-center"
+          className="md:-p-5 lg:-p-6 flex items-center justify-between rounded-2xl border p-4"
         >
-          <div className="flex items-center gap-6 flex-wrap">
+          <div className="flex flex-wrap items-center gap-6">
             <img
-              className="w-20 h-20 object-cover rounded-xl"
+              className="h-20 w-20 rounded-xl object-cover"
               src={player.image}
               alt=""
             />
             <div>
-              <h3 className="text-lg md:text-xl font-semibold">{player.name}</h3>
-              <p className="opacity-50 text-sm sm:text-base">{player.role}</p>
+              <h3 className="text-lg font-semibold md:text-xl">
+                {player.name}
+              </h3>
+              <p className="text-sm opacity-50 sm:text-base">{player.role}</p>
               <p className="text-sm sm:text-base">Price: ${player.price}</p>
             </div>
           </div>
-          <button onClick={() => handleRemovePlayer(player.id)} className="transition-transform active:scale-95">
+          <button
+            onClick={() => handleRemovePlayer(player.id)}
+            className="transition-transform active:scale-95"
+          >
             <img src="../src/assets/trash.svg" alt="" />
           </button>
         </div>
       ))}
 
-      <div className="inline-block border rounded-2xl p-1">
-        <button onClick={() => handlePlayerStatus("available")} className="bg-[#E7FE29] text-black rounded-xl px-3 py-2 md:px-4 md:py-3 lg:px-5 lg:py-4 font-bold transition-transform active:scale-95">
-        Add More Player
+      <div className="inline-block rounded-2xl border p-1">
+        <button
+          onClick={() => handlePlayerStatus("available")}
+          className="rounded-xl bg-[#E7FE29] px-3 py-2 font-bold text-black transition-transform active:scale-95 md:px-4 md:py-3 lg:px-5 lg:py-4"
+        >
+          Add More Player
         </button>
       </div>
     </div>
@@ -42,5 +50,5 @@ export default function SelectedPlayers({
 SelectedPlayers.propTypes = {
   selectedPlayers: PropTypes.array,
   handleRemovePlayer: PropTypes.func,
-  handlePlayerStatus: PropTypes.func
+  handlePlayerStatus: PropTypes.func,
 };

@@ -1,8 +1,19 @@
-# React + Vite
+# BPL-DREAM 11
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## Description
 
-Currently, two official plugins are available:
+BPL-DREAM 11 is a web application for creating a fantasy cricket team.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Technologies Used
+
+- TailwindCSS
+- JavaScript
+- React
+- React-Toastify
+- Vite
+
+## Key Features
+
+1. Get free credit to buy players.
+2. Buy players from the player list.
+3. Remove players from your team.

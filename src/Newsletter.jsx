@@ -1,21 +1,36 @@
 export default function Newsletter() {
   return (
-      <section className="relative">
-        <section className="absolute top-0 left-0 w-full grid grid-rows-2 h-full -z-10">
-            <div className="bg-white row-span-1"></div>
-            <div className="bg-black row-span-1"></div>
-        </section>
-        <section className="max-w-[1320px] mx-auto w-11/12 border border-white rounded-3xl p-4 md:p-5 lg:p-6">
-        <div className="bg-gradient-to-tr from-cyan-200 via-white to-orange-200 rounded-2xl text-center p-4 sm:p-8 md:p-16 lg:p-20">
-            <h2 className="text-xl md:text-2xl lg:text-3xl font-bold mb-4">Subscribe to our Newsletter</h2>
-            <p className="text-sm sm:text-base md:text-lg text-[#131313B2] mb-6">Get the latest updates and news right in your inbox!</p>
-            <form action="" className="flex items-center justify-center flex-wrap gap-4">
-                <input className="max-w-sm w-full border rounded-xl px-3 py-2 md:px-4 md:py-3 lg:px-5 lg:py-4 text-sm sm:text-base" type="email" placeholder="Enter your email" />
-                <button className="bg-gradient-to-br from-red-300 via-amber-300 to-yellow-200 shadow-sm text-black rounded-xl px-3 py-2 md:px-4 md:py-3 lg:px-5 lg:py-4 font-bold transition-transform active:scale-95 text-sm sm:text-base" type="submit">Subscribe</button>
-            </form>
-        </div>
-        </section>
-        
+    <section className="relative">
+      <section className="absolute left-0 top-0 -z-10 grid h-full w-full grid-rows-2">
+        <div className="row-span-1 bg-white"></div>
+        <div className="row-span-1 bg-black"></div>
       </section>
+      <section className="mx-auto w-11/12 max-w-[1320px] rounded-3xl border border-white p-4 md:p-5 lg:p-6">
+        <div className="rounded-2xl bg-gradient-to-tr from-cyan-200 via-white to-orange-200 p-4 text-center sm:p-8 md:p-16 lg:p-20">
+          <h2 className="mb-4 text-xl font-bold md:text-2xl lg:text-3xl">
+            Subscribe to our Newsletter
+          </h2>
+          <p className="mb-6 text-sm text-[#131313B2] sm:text-base md:text-lg">
+            Get the latest updates and news right in your inbox!
+          </p>
+          <form
+            action=""
+            className="flex flex-wrap items-center justify-center gap-4"
+          >
+            <input
+              className="w-full max-w-sm rounded-xl border px-3 py-2 text-sm sm:text-base md:px-4 md:py-3 lg:px-5 lg:py-4"
+              type="email"
+              placeholder="Enter your email"
+            />
+            <button
+              className="rounded-xl bg-gradient-to-br from-red-300 via-amber-300 to-yellow-200 px-3 py-2 text-sm font-bold text-black shadow-sm transition-transform active:scale-95 sm:text-base md:px-4 md:py-3 lg:px-5 lg:py-4"
+              type="submit"
+            >
+              Subscribe
+            </button>
+          </form>
+        </div>
+      </section>
+    </section>
   );
 }
