@@ -49,7 +49,7 @@ function App() {
     let selected = players.find((player) => player.id === id);
 
     if (claimCredit < selected.price) {
-      toast.error("Not enough credit to buy this palyer. Claim some credit.", {
+      toast.error("Not enough credit to buy this player. Claim some credit.", {
         position: "top-center",
         autoClose: 3000,
         hideProgressBar: false,
