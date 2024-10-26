@@ -6,22 +6,22 @@ export default function SelectedPlayers({
   handlePlayerStatus
 }) {
   return (
-    <div className="space-y-6 mt-8 mb-20">
+    <div className="space-y-6 mt-8 mb-4 sm:mb-8 md:mb-16 lg:mb-20">
       {selectedPlayers.map((player) => (
         <div
           key={player.id}
-          className="border rounded-2xl p-6 flex justify-between items-center"
+          className="border rounded-2xl p-4 md:-p-5 lg:-p-6 flex justify-between items-center"
         >
-          <div className="flex items-center gap-6">
+          <div className="flex items-center gap-6 flex-wrap">
             <img
               className="w-20 h-20 object-cover rounded-xl"
               src={player.image}
               alt=""
             />
             <div>
-              <h3 className="text-xl font-semibold">{player.name}</h3>
-              <p className="opacity-50">{player.role}</p>
-              <p>Price: ${player.price}</p>
+              <h3 className="text-lg md:text-xl font-semibold">{player.name}</h3>
+              <p className="opacity-50 text-sm sm:text-base">{player.role}</p>
+              <p className="text-sm sm:text-base">Price: ${player.price}</p>
             </div>
           </div>
           <button onClick={() => handleRemovePlayer(player.id)} className="transition-transform active:scale-95">

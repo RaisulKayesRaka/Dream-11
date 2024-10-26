@@ -5,8 +5,8 @@ import PropTypes from "prop-types";
 export default function Players({players, playerStatus, handlePlayerStatus, handleSelectedPlayers, selectedPlayers, handleRemovePlayer}){
   return (
     <>
-      <section className="mx-auto max-w-[1320px] w-11/12 mt-20">
-        <div className="flex justify-between items-center flex-col sm:flex-row gap-2">
+      <section className="mx-auto max-w-[1320px] w-11/12 mt-8 md:mt-16 lg:mt-20">
+        <div className="flex justify-between items-center flex-col gap-4 sm:flex-row gap-2">
           <div>
             {playerStatus.status === "available" ? (
               <h1 className="text-xl md:text-2xl font-bold">
