@@ -5,6 +5,8 @@ import PropTypes from "prop-types";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import Players from "./Players";
+import Newsletter from "./Newsletter";
+import Footer from "./Footer";
 
 function App() {
   let [claimCredit, setClaimCredit] = useState(0);
@@ -121,7 +123,10 @@ function App() {
           selectedPlayers={selectedPlayers}
           handleRemovePlayer={handleRemovePlayer}
         ></Players>
+        <Newsletter></Newsletter>
+        <Footer></Footer>
       </main>
+
     </>
   );
 }
