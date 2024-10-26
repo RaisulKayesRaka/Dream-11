@@ -2,7 +2,7 @@ import PropTypes from "prop-types";
 
 export default function Nav({ claimCredit }) {
   return (
-    <nav className="sticky top-0 bg-white/50 pb-4 pt-4 backdrop-blur-sm sm:pt-8 md:pb-5 md:pt-10 lg:pb-6 lg:pt-12">
+    <nav className="sticky top-0 z-10 bg-white/50 pb-4 pt-4 backdrop-blur-sm sm:pt-8 md:pb-5 md:pt-10 lg:pb-6 lg:pt-12">
       <div className="mx-auto flex w-11/12 max-w-[1320px] items-center justify-between">
         <img
           className="w-12 md:w-16 lg:w-[72px]"

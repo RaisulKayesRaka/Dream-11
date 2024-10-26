@@ -110,11 +110,8 @@ function App() {
   return (
     <>
       <ToastContainer />
-      <header className="text-[#131313]">
         <Nav claimCredit={claimCredit}></Nav>
         <Banner handleClaimCredit={handleClaimCredit}></Banner>
-      </header>
-      <main>
         <Players
           players={players}
           playerStatus={playerStatus}
@@ -125,7 +122,6 @@ function App() {
         ></Players>
         <Newsletter></Newsletter>
         <Footer></Footer>
-      </main>
     </>
   );
 }

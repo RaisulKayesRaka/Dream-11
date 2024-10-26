@@ -23,11 +23,10 @@ export default function AvailablePlayers({ players, handleSelectedPlayers }) {
           </div>
           <hr />
           <div className="mt-4 flex items-center justify-between text-sm sm:text-base">
-            <p className="font-semibold">Batting</p>
-            <p>{player.batting}</p>
+            <p className="font-semibold">Ratting</p>
           </div>
           <div className="mt-4 flex items-center justify-between text-sm sm:text-base">
-            <p className="font-semibold">Bowling</p>
+            <p>{player.batting}</p>
             <p>{player.bowling}</p>
           </div>
           <div className="mt-3 flex flex-wrap items-center justify-between gap-4 text-sm sm:text-base">
