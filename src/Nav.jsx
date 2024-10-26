@@ -6,7 +6,7 @@ export default function Nav({ claimCredit }) {
       <div className="mx-auto flex w-11/12 max-w-[1320px] items-center justify-between">
         <img
           className="w-12 md:w-16 lg:w-[72px]"
-          src="../src/assets/logo.svg"
+          src="./assets/logo.svg"
           alt=""
         />
         <div className="flex items-center gap-12">
@@ -28,7 +28,7 @@ export default function Nav({ claimCredit }) {
             <p className="font-semibold">
               <span>{claimCredit}</span> Coin
             </p>
-            <img src="../src/assets/coin.svg" alt="" />
+            <img src="./assets/coin.svg" alt="" />
           </div>
         </div>
       </div>

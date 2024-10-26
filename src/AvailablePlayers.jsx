@@ -7,12 +7,12 @@ export default function AvailablePlayers({ players, handleSelectedPlayers }) {
         <div key={player.id} className="md:-p-5 lg:-p-6 rounded-2xl border p-4">
           <img className="rounded-xl" src={player.image} alt="" />
           <div className="mt-6 flex items-center gap-4">
-            <img src="../src/assets/profile.svg" alt="" />
+            <img src="./assets/profile.svg" alt="" />
             <h3 className="text-xl font-semibold">{player.name}</h3>
           </div>
           <div className="my-4 flex items-center justify-between gap-8 truncate text-sm sm:text-base">
             <div className="flex items-center gap-3">
-              <img src="../src/assets/flag.svg" alt="" />
+              <img src="./assets/flag.svg" alt="" />
               <p className="opacity-50">{player.country}</p>
             </div>
             <div className="truncate rounded-lg bg-[#1313130D] px-4 py-2">

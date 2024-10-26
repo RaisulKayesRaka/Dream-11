@@ -30,7 +30,7 @@ export default function SelectedPlayers({
             onClick={() => handleRemovePlayer(player.id)}
             className="transition-transform active:scale-95"
           >
-            <img src="../src/assets/trash.svg" alt="" />
+            <img src="./assets/trash.svg" alt="" />
           </button>
         </div>
       ))}

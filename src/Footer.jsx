@@ -3,7 +3,7 @@ export default function Footer() {
     <section className="bg-black text-white">
       <div className="mx-auto w-11/12 max-w-[1320px] py-6 sm:py-8 md:py-10 lg:py-12">
         <div className="mb-6 flex items-center justify-center sm:mb-8 md:mb-10 lg:mb-12">
-          <img className="w-32" src="../src/assets/logo.svg" alt="" />
+          <img className="w-32" src="./assets/logo.svg" alt="" />
         </div>
         <div className="grid grid-cols-1 gap-6 sm:gap-8 md:grid-cols-2 md:place-items-center md:items-start md:gap-10 lg:grid-cols-3 lg:gap-20">
           <div className="space-y-4">
