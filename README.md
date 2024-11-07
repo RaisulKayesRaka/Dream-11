@@ -1,11 +1,9 @@
-# BPL-DREAM 11
+# DREAM 11
 
 ## Description
-
-BPL-DREAM 11 is a web application for creating a fantasy cricket team.
+DREAM 11 is a web application for creating a fantasy cricket team.
 
 ## Technologies Used
-
 - TailwindCSS
 - JavaScript
 - React
@@ -13,7 +11,6 @@ BPL-DREAM 11 is a web application for creating a fantasy cricket team.
 - Vite
 
 ## Key Features
-
 1. Get free credit to buy players.
 2. Buy players from the player list.
 3. Remove players from your team.
